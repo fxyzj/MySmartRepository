@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.xq.fuxiaoyong.smartcarcontrollersystem.MainActivity">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buleConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect" />
+
+
+    <Button
+        android:onClick="bluetoothConnectClick"
+        android:id="@+id/connent"
+        android:text="@string/connect"
+        android:layout_below="@id/buleConnect"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+
+
+    <LinearLayout
+
+        android:id="@+id/aa"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/connent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:onClick="leftClick"
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left"/>
+        <Button
+            android:onClick="rightClick"
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bb"
+        android:layout_below="@id/aa"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:onClick="stopClick"
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/bb"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:onClick="forwardClick"
+            android:id="@+id/forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="forward"/>
+        <Button
+            android:onClick="backwardClick"
+            android:id="@+id/backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="backward"/>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:text="数据开启"
+        android:onClick="dataConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/startData" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sensorTxt"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/startData"/>
+
+    <Button
+        android:id="@+id/yunyin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensorTxt"
+        android:layout_centerHorizontal="true"
+        android:onClick="yuyinClick"
+        android:text="语音" />
+
+</RelativeLayout>
